@@ -11,12 +11,22 @@
   display: flex;
   text-transform: uppercase;
 }
+@media screen and (max-width: 706px) {
+  .links {
+    display: none;
+  }
+}
 .links_item {
   margin-left: 60px;
   font-size: 12px;
   cursor: pointer;
   letter-spacing: 2px;
   position: relative;
+}
+@media screen and (max-width: 912px) {
+  .links_item {
+    margin-left: 40px;
+  }
 }
 .links_item > a {
   text-decoration: none;
@@ -48,30 +58,52 @@
 
 .galery {
   display: flex;
+  flex-direction: row;
   width: 100%;
+  max-width: 1440px;
   max-width: 100vw;
   justify-content: space-between;
+}
+@media screen and (max-width: 1110px) {
+  .galery {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .galery-controll {
   display: flex;
-  width: 50%;
-  max-width: 770px;
+  flex-grow: 2;
   flex-direction: column;
   justify-content: center;
 }
-.galery-controll_title1 {
+.galery-controll_title-block {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1110px) {
+  .galery-controll_title-block {
+    flex-direction: row;
+    margin: 40px 0;
+  }
+}
+.galery-controll .galery-title-thin {
   color: #BDBDBD;
   font-weight: 300;
   font-family: HovesLite;
 }
-.galery-controll_title2 {
+.galery-controll .galery-title-bold {
   font-family: HovesBold;
 }
 .galery-controll_switch {
   display: flex;
   align-items: center;
   margin-top: 90px;
+}
+@media screen and (max-width: 1110px) {
+  .galery-controll_switch {
+    display: none;
+  }
 }
 .galery-controll_switch .line {
   height: 1px;
@@ -93,12 +125,25 @@
   color: #333;
 }
 
+.switch-buttons-overlay {
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: calc(50% - 25px);
+  justify-content: space-between;
+}
+@media screen and (max-width: 1110px) {
+  .switch-buttons-overlay {
+    display: flex;
+  }
+}
+
 .switchBtn:hover {
   background-color: #c0bde0;
 }
 
 .slider {
-  width: 70%;
+  width: 100%;
   max-width: 770px;
   overflow: hidden;
   position: relative;
@@ -107,6 +152,7 @@
 }
 
 .slider-items {
+  width: 300%;
   display: flex;
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
@@ -114,7 +160,7 @@
 }
 
 .image-wrapper {
-  width: 100%;
+  width: 770px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -124,6 +170,8 @@
 
 .sliderImg {
   object-fit: cover;
+  max-width: 100%;
+  height: auto;
 }
 
 .showProjectBtn {
@@ -137,6 +185,11 @@
   border: none;
   background-color: #fff;
 }
+@media screen and (max-width: 540px) {
+  .showProjectBtn {
+    padding: 15px 25px;
+  }
+}
 
 .showProjectBtn > img {
   margin-left: 16px;
@@ -144,6 +197,11 @@
   color: #333;
   transform: translateX(0);
   transition: 0.3s all ease-in-out;
+}
+@media screen and (max-width: 540px) {
+  .showProjectBtn > img {
+    margin-left: 8px;
+  }
 }
 
 .showProjectBtn:hover > img {
@@ -159,11 +217,67 @@
   color: #BDBDBD;
   margin-top: 90px;
 }
+.countSlides .countSlides {
+  font-size: 24px;
+  color: #BDBDBD;
+  margin-top: 90px;
+}
+@media screen and (max-width: 1110px) {
+  .countSlides .countSlides .countSlides {
+    display: none;
+  }
+}
+.countSlides .countSlides .current {
+  margin-right: 24px;
+}
+.countSlides .countSlides .total {
+  margin-left: 24px;
+}
+@media screen and (max-width: 1110px) {
+  .countSlides {
+    display: none;
+  }
+}
 .countSlides .current {
   margin-right: 24px;
 }
 .countSlides .total {
   margin-left: 24px;
+}
+
+.overlay-counter.countSlides {
+  margin: 0;
+  background-color: #fff;
+  padding: 8px 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 1110px) {
+  .overlay-counter.countSlides {
+    display: block;
+  }
+}
+@media screen and (max-width: 540px) {
+  .overlay-counter.countSlides {
+    font-size: 16px;
+  }
+}
+
+.about {
+  padding: 30px 100px;
+  background-color: #FBFBFB;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.about_photo-col {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+}
+.about .about-photo {
+  object-fit: contain;
 }
 
 @font-face {
@@ -185,9 +299,8 @@
 }
 
 body {
-  display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: Hoves;
   color: #333;
   display: flex;
@@ -195,8 +308,13 @@ body {
 }
 
 .main {
-  max-width: 1440px;
-  width: 1440px;
+  width: 1488px;
+  max-width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .largeTitle {

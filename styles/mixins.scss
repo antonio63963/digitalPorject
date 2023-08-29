@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+@mixin galeryLarge {
+  @media screen and (max-width: 1110px) {
+      @content;
+  }
+}
+@mixin galerySmall {
+  @media screen and (max-width: 540px) {
+      @content;
+  }
+}
+// @mixin sliderControll {
+//   @media screen and (max-width: 1040px) {
+//       @content;
+//   }
+// }
+@mixin lgSize {
+  @media screen and (max-width: 912px) {
+      @content;
+  }
+}
+
+@mixin mdSize {
+  @media screen and (max-width: 706px) {
+      @content;
+  }
+}

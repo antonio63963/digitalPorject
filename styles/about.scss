@@ -1,0 +1,15 @@
+.about {
+  padding: 30px 100px;
+  background-color: $bgGrey;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &_photo-col {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+  }
+  .about-photo {
+    object-fit: contain;
+  }
+}

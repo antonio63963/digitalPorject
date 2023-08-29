@@ -2,34 +2,62 @@
 
 .galery {
   display: flex;
+  flex-direction: row;
   width: 100%;
+  max-width: 1440px;
   max-width: 100vw;
   justify-content: space-between;
+
+  @include galeryLarge {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 .galery-controll {
   display: flex;
-  width: 50%;
-  max-width: 770px;
+  // width: 50%;
+  // max-width: 770px;
   // max-width: 100%;
+  flex-grow: 2;
   flex-direction: column;
   justify-content: center;
-  &_title1 {
+
+  &_title-block {
+    display: flex;
+    flex-direction: column;
+
+    @include galeryLarge {
+      flex-direction: row;
+      margin: 40px 0;
+    }
+  }
+
+  .galery-title-thin {
     color: $secondary-color;
     font-weight: 300;
     font-family: HovesLite;
   }
-  &_title2 {
+
+  .galery-title-bold {
     font-family: HovesBold;
   }
+
   &_switch {
     display: flex;
     align-items: center;
     margin-top: 90px;
+
+    @include galeryLarge {
+      display: none;
+    }
+
     .line {
       height: 1px;
       background-color: $grey-light;
       width: 80%;
     }
+
     .switch-forward {
       margin-left: 24px;
     }
@@ -46,37 +74,56 @@
   border: none;
   color: $primary-color;
 }
+
+.switch-buttons-overlay {
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: calc(50% - 25px);
+  justify-content: space-between;
+
+  @include galeryLarge {
+    display: flex;
+  }
+}
+
 .switchBtn:hover {
   background-color: $hover-text-color;
 
 }
+
 .slider {
-  width: 70%;
+  width: 100%;
   max-width: 770px;
   overflow: hidden;
   position: relative;
   display: flex;
   background-color: #222;
 }
+
 .slider-items {
+  width: 300%;
   display: flex;
   -webkit-transition: .7s;
   -o-transition: .7s;
   transition: .7s;
 }
+
 .image-wrapper {
-  width: 100%;
-  // max-width: 100%;
+  width: 770px; // needs for adapting
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
 }
+
 .sliderImg {
   object-fit: cover;
-  // max-width: 100%;
+  max-width: 100%;
+  height: auto;
 }
+
 // button look at
 .showProjectBtn {
   position: absolute;
@@ -88,29 +135,78 @@
   text-transform: uppercase;
   border: none;
   background-color: $bgColor;
+  @include galerySmall {
+    padding: 15px 25px;
+  }
 }
+
 .showProjectBtn>img {
   margin-left: 16px;
   width: 16px;
   color: $primary-color;
   transform: translateX(0);
-  transition: .3s all ease-in-out ; 
+  transition: .3s all ease-in-out;
+  @include galerySmall {
+    margin-left: 8px;
+  }
 }
+
 .showProjectBtn:hover>img {
   transform: translateX(10px);
 }
+
 .showProjectBtn:hover {
   background-color: $hover-text-color;
 }
+
 .countSlides {
   font-size: 24px;
   color: $secondary-color;
   margin-top: 90px;
+
+  .countSlides {
+    font-size: 24px;
+    color: $secondary-color;
+    margin-top: 90px;
+
+    .countSlides {
+      @include galeryLarge {
+        display: none;
+      }
+    }
+
+    .current {
+      margin-right: 24px;
+    }
+
+    .total {
+      margin-left: 24px;
+    }
+  }
+
+  @include galeryLarge {
+    display: none;
+  }
+
   .current {
     margin-right: 24px;
   }
+
   .total {
     margin-left: 24px;
   }
 }
-
+.overlay-counter.countSlides {
+  margin: 0;
+  background-color: $bgColor;
+  padding: 8px 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include galeryLarge {
+    display: block;
+  }
+  @include galerySmall {
+    font-size: 16px;
+  }
+}

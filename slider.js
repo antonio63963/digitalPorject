@@ -44,7 +44,7 @@ function onSwitch(e) {
 switchButtons.addEventListener('click', onSwitch)
 
 ~function () {
-  sliderItems.style.width = `${sliderWidth}%`;
+  // sliderItems.style.width = `${sliderWidth}%`;
   total.textContent = set2Digit(imgArray.length);
   setNumberSlide()
   setNumberSlide();
