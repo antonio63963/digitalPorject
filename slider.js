@@ -1,8 +1,12 @@
 const switchButtons = document.querySelector('.galery-controll_switch');
+const switchButtonsOverlay = document.querySelector('.switch-buttons-overlay');
 const sliderItems = document.querySelector('.slider-items');
 
 const total = document.querySelector('.total');
 const current = document.querySelector('.current');
+const totalOverlay = document.querySelector('.overlay-counter>.total');
+const currentOverlay = document.querySelector('.overlay-counter>.current');
+
 
 const imgArray = [
   'assets/headline.png',
@@ -16,6 +20,7 @@ let count = 0;
 
 function setNumberSlide() {
   current.textContent = set2Digit(count + 1);
+  currentOverlay.textContent = set2Digit(count + 1);
 }
 
 function set2Digit(num) {
@@ -41,11 +46,13 @@ function onSwitch(e) {
   }
 }
 
-switchButtons.addEventListener('click', onSwitch)
+switchButtons.addEventListener('click', onSwitch);
+switchButtonsOverlay.addEventListener('click', onSwitch);
 
 ~function () {
   // sliderItems.style.width = `${sliderWidth}%`;
   total.textContent = set2Digit(imgArray.length);
+  totalOverlay.textContent = set2Digit(imgArray.length);
   setNumberSlide()
   setNumberSlide();
   imgArray.forEach(img => {
