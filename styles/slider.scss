@@ -47,7 +47,7 @@
   color: $primary-color;
 }
 .switchBtn:hover {
-  color: $hover-text-color;
+  background-color: $hover-text-color;
 
 }
 .slider {
@@ -89,11 +89,19 @@
   border: none;
   background-color: $bgColor;
 }
-.showProjectBtn>object {
+.showProjectBtn>img {
   margin-left: 16px;
-  transition: .3s 
+  width: 16px;
+  color: $primary-color;
+  transform: translateX(0);
+  transition: .3s all ease-in-out ; 
 }
-
+.showProjectBtn:hover>img {
+  transform: translateX(10px);
+}
+.showProjectBtn:hover {
+  background-color: $hover-text-color;
+}
 .countSlides {
   font-size: 24px;
   color: $secondary-color;

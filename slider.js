@@ -6,7 +6,7 @@ const current = document.querySelector('.current');
 
 const imgArray = [
   'assets/headline.png',
-  'assets/about1.png',
+  'assets/headline.png',
   'assets/headline.png',
 ];
 

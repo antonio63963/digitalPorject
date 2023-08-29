@@ -94,7 +94,7 @@
 }
 
 .switchBtn:hover {
-  color: #c0bde0;
+  background-color: #c0bde0;
 }
 
 .slider {
@@ -138,9 +138,20 @@
   background-color: #fff;
 }
 
-.showProjectBtn > object {
+.showProjectBtn > img {
   margin-left: 16px;
-  transition: 0.3s;
+  width: 16px;
+  color: #333;
+  transform: translateX(0);
+  transition: 0.3s all ease-in-out;
+}
+
+.showProjectBtn:hover > img {
+  transform: translateX(10px);
+}
+
+.showProjectBtn:hover {
+  background-color: #c0bde0;
 }
 
 .countSlides {
