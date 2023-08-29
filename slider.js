@@ -20,10 +20,12 @@ let count = 0;
 function onForward() {
   count = count === imgArray.length - 1 ? imgArray.length - 1 : count + 1;
   sliderItems.style.marginLeft = `-${count * percentsMove}%`;
+  current.textContent = count + 1;
 };
 function onBack() {
   count = count === 0 ? 0 : count - 1;
   sliderItems.style.marginLeft = `-${count * percentsMove}%`;
+  current.textContent = count + 1;
 };
 function onSwitch(e) {
   if (e.target.classList.contains('slider-forward')) {
