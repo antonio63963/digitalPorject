@@ -1,0 +1,108 @@
+@import './variables.scss';
+
+.galery {
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: space-between;
+}
+.galery-controll {
+  display: flex;
+  width: 50%;
+  max-width: 770px;
+  // max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  &_title1 {
+    color: $secondary-color;
+    font-weight: 300;
+    font-family: HovesLite;
+  }
+  &_title2 {
+    font-family: HovesBold;
+  }
+  &_switch {
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+    .line {
+      height: 1px;
+      background-color: $grey-light;
+      width: 80%;
+    }
+    .switch-forward {
+      margin-left: 24px;
+    }
+  }
+}
+
+.switch-icon {
+  width: 32px;
+}
+
+.switchBtn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: $primary-color;
+}
+.switchBtn:hover {
+  color: $hover-text-color;
+
+}
+.slider {
+  width: 70%;
+  max-width: 770px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  background-color: #222;
+}
+.slider-items {
+  display: flex;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
+}
+.image-wrapper {
+  width: 100%;
+  // max-width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.sliderImg {
+  object-fit: cover;
+  // max-width: 100%;
+}
+// button look at
+.showProjectBtn {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  background-color: $bgColor;
+}
+.showProjectBtn>object {
+  margin-left: 16px;
+  transition: .3s 
+}
+
+.countSlides {
+  font-size: 24px;
+  color: $secondary-color;
+  margin-top: 90px;
+  .current {
+    margin-right: 24px;
+  }
+  .total {
+    margin-left: 24px;
+  }
+}
+

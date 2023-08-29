@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Orange</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <object data="assets/logo.svg"> </object>
+      <nav>
+        <ul class="links">
+          <li class="links_item"><a href="#">Главная</a></li>
+          <li class="links_item"><a href="#">Галерея</a></li>
+          <li class="links_item"><a href="#">Проекты</a></li>
+          <li class="links_item"><a href="#">Сертификаты</a></li>
+          <li class="links_item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="galery">
+      <div class="galery-controll">
+        <h1 class="galery-controll_title1 largeTitle">Project</h1>
+        <h1 class="galery-controll_title2 largeTitle">Home</h1>
+        <div class="galery-controll_switch">
+
+          <button class="switchBtn slider-back">
+            <svg class="slider-back switch-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="slider-back" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="M328 112L184 256l144 144"/></svg>
+          </button>
+
+          <button class="switch-forward switchBtn slider-forward">
+            <svg xmlns="http://www.w3.org/2000/svg" class="slider-forward switch-icon" viewBox="0 0 512 512"><path class="slider-forward" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+          </button>
+          <div class="line"></div>
+        </div>
+        <div class="countSlides">
+          <span class="current">0</span>
+          <span> / </span>
+          <span class="total">0</span>
+        </div>
+      </div>
+
+      <div class="slider">
+        <button class="showProjectBtn">
+          Взглянуть
+          <object data="assets/arrowRight.svg"> </object>
+        </button>
+        <div class="slider-items">
+        </div>
+      </div>
+
+    </div>
+
+    <section class="about"></section>
+    <section class="tasks"></section>
+    <section class="projects"></section>
+    <section class="footer"></section>
+  </main>
+</body>
+<script src="slider.js"></script>
+
+</html>

@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  width: 100%;
+}
+.links {
+  list-style-type: none;
+  display: flex;
+  text-transform: uppercase;
+
+  &_item {
+    margin-left: 60px;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+   
+  }
+  &_item>a {
+    text-decoration: none;
+    color: $primary-color;
+    line-height: 24px;
+  }
+  &_item>a:hover {
+    color: $hover-text-color;
+  }
+  &_item:hover::before, &_item:hover::after {
+    transform: scale(1);
+  }
+  &_item::after {
+    top: 0;
+  }
+  &_item::before {
+    bottom: 0;
+  }
+  &_item::before, &_item::after {
+    content: '';
+    width: 100%;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    background-color: $hover-text-color;
+    transition: 0.3s;
+    transform: scaleX(0);
+  }
+}

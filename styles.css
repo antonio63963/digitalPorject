@@ -1,0 +1,197 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  width: 100%;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  text-transform: uppercase;
+}
+.links_item {
+  margin-left: 60px;
+  font-size: 12px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+}
+.links_item > a {
+  text-decoration: none;
+  color: #333;
+  line-height: 24px;
+}
+.links_item > a:hover {
+  color: #c0bde0;
+}
+.links_item:hover::before, .links_item:hover::after {
+  transform: scale(1);
+}
+.links_item::after {
+  top: 0;
+}
+.links_item::before {
+  bottom: 0;
+}
+.links_item::before, .links_item::after {
+  content: "";
+  width: 100%;
+  left: 0;
+  position: absolute;
+  height: 2px;
+  background-color: #c0bde0;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+
+.galery {
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: space-between;
+}
+
+.galery-controll {
+  display: flex;
+  width: 50%;
+  max-width: 770px;
+  flex-direction: column;
+  justify-content: center;
+}
+.galery-controll_title1 {
+  color: #BDBDBD;
+  font-weight: 300;
+  font-family: HovesLite;
+}
+.galery-controll_title2 {
+  font-family: HovesBold;
+}
+.galery-controll_switch {
+  display: flex;
+  align-items: center;
+  margin-top: 90px;
+}
+.galery-controll_switch .line {
+  height: 1px;
+  background-color: #F2F2F2;
+  width: 80%;
+}
+.galery-controll_switch .switch-forward {
+  margin-left: 24px;
+}
+
+.switch-icon {
+  width: 32px;
+}
+
+.switchBtn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: #333;
+}
+
+.switchBtn:hover {
+  color: #c0bde0;
+}
+
+.slider {
+  width: 70%;
+  max-width: 770px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  background-color: #222;
+}
+
+.slider-items {
+  display: flex;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.image-wrapper {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.sliderImg {
+  object-fit: cover;
+}
+
+.showProjectBtn {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #fff;
+}
+
+.showProjectBtn > object {
+  margin-left: 16px;
+  transition: 0.3s;
+}
+
+.countSlides {
+  font-size: 24px;
+  color: #BDBDBD;
+  margin-top: 90px;
+}
+.countSlides .current {
+  margin-right: 24px;
+}
+.countSlides .total {
+  margin-left: 24px;
+}
+
+@font-face {
+  font-family: Hoves;
+  src: url("./fonts/Hoves.ttf");
+}
+@font-face {
+  font-family: HovesLite;
+  src: url("./fonts/HovesLite.ttf");
+}
+@font-face {
+  font-family: HovesBold;
+  src: url("./fonts/HovesBold.ttf");
+}
+*, body, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: Hoves;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  max-width: 1440px;
+  width: 1440px;
+}
+
+.largeTitle {
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 64px;
+}
+
+/*# sourceMappingURL=styles.css.map */
