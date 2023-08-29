@@ -26,3 +26,33 @@
       @content;
   }
 }
+@mixin aboutLarge {
+  @media screen and (max-width: 1200px) {
+      @content;
+  }
+}
+@mixin aboutPadding {
+  @media screen and (max-width: 988px) {
+      @content;
+  }
+}
+@mixin aboutBig {
+  @media screen and (max-width: 1035px) {
+      @content;
+  }
+}
+@mixin aboutMiddle {
+  @media screen and (max-width: 915px) {
+      @content;
+  }
+}
+@mixin aboutSmall {
+  @media screen and (max-width: 565px) {
+      @content;
+  }
+}
+@mixin aboutXS {
+  @media screen and (max-width: 390px) {
+      @content;
+  }
+}

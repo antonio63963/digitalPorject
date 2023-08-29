@@ -46,7 +46,25 @@ body {
   font-size: $fontLarge;
   text-transform: uppercase;
   line-height: 64px;
-  // @include sliderControll {
-  //   font-size: 48px;
-  // }
+  @include aboutSmall {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  @include aboutXS {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+.section-title {
+  font-size: 64px;
+  font-weight: 300;
+  font-family: HovesLite;
+  color: $secondary-color;
+  word-wrap: normal;
+  @include aboutBig {
+    font-size: 48px;
+  }
+  @include aboutXS {
+    font-size: 32px;
+  }
 }

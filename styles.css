@@ -265,19 +265,101 @@
 }
 
 .about {
-  padding: 30px 100px;
+  position: relative;
+  margin-top: 117px;
+  padding: 30px 164px 30px 6px;
   background-color: #FBFBFB;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .about {
+    padding-right: 16px;
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 1035px) {
+  .about {
+    padding: 16px 16px 16px 6px;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1035px) {
+  .about {
+    margin-top: 40px;
+  }
+}
 .about_photo-col {
   display: flex;
   flex-direction: column;
-  max-width: 270px;
+  margin-right: 30px;
+}
+@media screen and (max-width: 1035px) {
+  .about_photo-col {
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 915px) {
+  .about_photo-col.col1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 565px) {
+  .about_photo-col.col2 {
+    display: none;
+  }
+}
+.about .photo3 {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1035px) {
+  .about .photo3 {
+    margin-top: 16px;
+  }
 }
 .about .about-photo {
+  width: 270px;
+}
+@media screen and (max-width: 1035px) {
+  .about .about-photo {
+    width: 200px;
+  }
+}
+.about .about-photo > img {
   object-fit: contain;
+  max-width: 100%;
+}
+.about .about-photo.photo2 {
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+@media screen and (max-width: 1035px) {
+  .about .about-photo.photo2 {
+    bottom: -20px;
+  }
+}
+@media screen and (max-width: 915px) {
+  .about .about-photo.photo2 {
+    bottom: -30px;
+  }
+}
+.about .about-button {
+  padding: 24px 64px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #fff;
+  margin-top: 20px;
+}
+@media screen and (max-width: 540px) {
+  .about .about-button {
+    padding: 12px 32px;
+  }
+}
+.about .about-button:hover {
+  background-color: #c0bde0;
 }
 
 @font-face {
@@ -321,6 +403,36 @@ body {
   font-size: 64px;
   text-transform: uppercase;
   line-height: 64px;
+}
+@media screen and (max-width: 565px) {
+  .largeTitle {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .largeTitle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.section-title {
+  font-size: 64px;
+  font-weight: 300;
+  font-family: HovesLite;
+  color: #BDBDBD;
+  word-wrap: normal;
+}
+@media screen and (max-width: 1035px) {
+  .section-title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .section-title {
+    font-size: 32px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
