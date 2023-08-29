@@ -1,7 +1,7 @@
 .about {
   position: relative;
   margin-top: 117px;
-  padding: 30px 164px 30px 6px;
+  padding: 30px 73px 30px 6px;
   background-color: $bgGrey;
   @include aboutLarge {
     padding-right: 16px;
@@ -10,9 +10,6 @@
   @include aboutBig {
     padding: 16px 16px 16px 6px;
     margin-top: 70px;
-  }
-  @include aboutBig {
-    margin-top: 40px;
   }
  
 

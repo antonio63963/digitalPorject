@@ -31,23 +31,23 @@
       @content;
   }
 }
-@mixin aboutPadding {
-  @media screen and (max-width: 988px) {
+@mixin tasksColumn {
+  @media screen and (max-width: 1050px) {
       @content;
   }
 }
 @mixin aboutBig {
-  @media screen and (max-width: 1035px) {
+  @media screen and (max-width: 1317px) {
       @content;
   }
 }
 @mixin aboutMiddle {
-  @media screen and (max-width: 915px) {
+  @media screen and (max-width: 1136px) {
       @content;
   }
 }
 @mixin aboutSmall {
-  @media screen and (max-width: 565px) {
+  @media screen and (max-width: 700px) {
       @content;
   }
 }
