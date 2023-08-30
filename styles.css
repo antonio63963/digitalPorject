@@ -11,7 +11,7 @@
   display: flex;
   text-transform: uppercase;
 }
-@media screen and (max-width: 706px) {
+@media screen and (max-width: 790px) {
   .links {
     display: none;
   }
@@ -144,7 +144,6 @@
 .slider {
   width: 100%;
   max-width: 770px;
-  min-width: 288px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -359,6 +358,7 @@
 
 .tasks {
   margin-top: 180px;
+  width: 100%;
 }
 @media screen and (max-width: 1200px) {
   .tasks {
@@ -379,6 +379,7 @@
 .tasks-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 60px;
   width: 100%;
   max-width: 1400px;
@@ -388,14 +389,10 @@
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 1050px) {
-  .tasks-row {
-    flex-direction: column;
-  }
-}
 
 .task-item {
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 .task-item_number {
@@ -415,11 +412,17 @@
     font-size: 120px;
   }
 }
+@media screen and (max-width: 390px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .task-item_description {
-  min-width: 279px;
   margin-left: 30px;
   font-size: 22px;
   line-height: 36px;
+  letter-spacing: 0;
   word-wrap: break-word;
 }
 @media screen and (max-width: 1317px) {
@@ -432,46 +435,28 @@
   .task-item_description {
     font-size: 16px;
     line-height: 24px;
-  }
-}
-@media screen and (max-width: 390px) {
-  .task-item_description {
     margin-left: 16px;
   }
 }
 
 .task-item:nth-child(1) {
-  margin-right: 180px;
+  margin-right: 170px;
+  width: 413px;
 }
 @media screen and (max-width: 1317px) {
   .task-item:nth-child(1) {
     margin-right: 50px;
   }
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 700px) {
   .task-item:nth-child(1) {
-    max-width: 350px;
+    margin-right: 0;
   }
 }
 
 .task-item:nth-child(2) {
-  min-width: 280px;
-}
-@media screen and (max-width: 1050px) {
-  .task-item:nth-child(2) {
-    max-width: 500px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .task-item:nth-child(2) {
-    max-width: 350px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .task-item:nth-child(2) > p {
-    max-width: 200px;
-  }
+  max-width: 580px;
+  margin-left: auto;
 }
 
 @font-face {

@@ -2,6 +2,7 @@
 
 .tasks {
   margin-top: 180px;
+  width: 100%;
   @include aboutLarge {
     margin-top: 150px;
   }
@@ -15,18 +16,17 @@
 .tasks-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 60px;
   width: 100%;
   max-width: 1400px;
   @include aboutBig {
     margin-top: 20px;
   }
-  @include tasksColumn {
-    flex-direction: column;
-  }
 }
 .task-item {
   display: flex;
+  flex-direction: row;
   align-items: center;
   &_number {
     font-family: SfProDisplayBlack;
@@ -39,14 +39,18 @@
     }
     @include aboutSmall {
       font-size: 120px;
-
     }
   }
+  @include aboutXS {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   &_description {
-    min-width: 279px;
     margin-left: 30px;
     font-size: 22px;
     line-height: 36px;
+    letter-spacing: 0;
+    // min-width: 288px;
     word-wrap: break-word;
     @include aboutBig {
       font-size: 18px;
@@ -55,35 +59,22 @@
     @include aboutSmall {
       font-size: 16px;
       line-height: 24px;
-    }
-    @include aboutXS {
       margin-left: 16px;
     }
   }
 }
 .task-item:nth-child(1) {
-  margin-right: 180px;
+  margin-right: 170px;
+  width: 413px;
   @include aboutBig {
     margin-right: 50px;
   }
-  @include tasksColumn {
-    max-width: 350px;
+  @include aboutSmall {
+    margin-right: 0;
   }
 }
 .task-item:nth-child(2) {
-  min-width: 280px;
-  @include tasksColumn {
-    // align-self: flex-end;
-  }
-  @include tasksColumn {
-    max-width: 500px;
-  }
-  @include aboutSmall {
-    max-width: 350px;
-  }
-}
-.task-item:nth-child(2)>p {
-  @include aboutXS {
-    max-width: 200px;
-  }
+  max-width: 580px;
+  margin-left: auto;
+
 }

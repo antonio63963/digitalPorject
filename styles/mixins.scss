@@ -22,17 +22,12 @@
 }
 
 @mixin mdSize {
-  @media screen and (max-width: 706px) {
+  @media screen and (max-width: 790px) {
       @content;
   }
 }
 @mixin aboutLarge {
   @media screen and (max-width: 1200px) {
-      @content;
-  }
-}
-@mixin tasksColumn {
-  @media screen and (max-width: 1050px) {
       @content;
   }
 }
