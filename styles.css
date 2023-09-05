@@ -339,6 +339,9 @@
     bottom: -30px;
   }
 }
+.about p.about-descriptrion_text {
+  margin-top: 20px;
+}
 .about .about-button {
   padding: 24px 64px;
   letter-spacing: 2px;
@@ -478,7 +481,9 @@
 
 .projects-wrapper {
   margin-top: 60px;
+  max-width: 100%;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 @media screen and (max-width: 1136px) {
   .projects-wrapper {
@@ -492,14 +497,28 @@
 }
 
 .projects-row {
-  min-width: 770px;
+  min-width: 760px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .project-item {
+  height: 100%;
   margin: 16px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .project-item {
+    margin: 16px;
+  }
+}
+@media screen and (max-width: 1136px) {
+  .project-item {
+    margin: 4px 8px;
+  }
 }
 
 .project-item:first-child {
@@ -511,8 +530,71 @@
 }
 
 .project-item > img {
-  object-fit: inherit;
+  object-fit: cover;
   max-width: 100%;
+  min-height: 100%;
+}
+
+.all-projects-btn {
+  align-self: flex-end;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.project-item:hover > .hover-description {
+  display: flex;
+}
+
+.hover-description {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 4px;
+  right: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.hover-description_content {
+  max-width: 80%;
+}
+.hover-description_content .show-project {
+  display: flex;
+}
+.hover-description_content .show-project span {
+  color: #fff;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+}
+.hover-description_content .show-project svg {
+  margin-left: 8px;
+  width: 16px;
+  color: #fff;
+}
+.hover-description_content p {
+  max-height: 100%;
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  .hover-description_content p {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hover-description_content p {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -630,6 +712,22 @@ body {
   .section-title {
     font-size: 32px;
   }
+}
+
+.dark-button {
+  background-color: #2C2C2C;
+  border: none;
+  padding: 24px 39px;
+  color: #F2F2F2;
+}
+@media screen and (max-width: 390px) {
+  .dark-button {
+    padding: 16px 28px;
+  }
+}
+
+.dark-button:hover {
+  background-color: #c0bde0;
 }
 
 /*# sourceMappingURL=styles.css.map */
