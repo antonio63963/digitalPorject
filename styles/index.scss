@@ -4,6 +4,7 @@
 @import 'about.scss';
 @import 'tasks.scss';
 @import 'projects.scss';
+@import 'contactUs.scss';
 
 @font-face {
   font-family: Hoves;
@@ -90,6 +91,7 @@ body {
   border: none;
   padding: 24px 39px;
   color: $grey-light;
+  text-transform: uppercase;
   @include aboutXS {
     padding: 16px 28px;
   }

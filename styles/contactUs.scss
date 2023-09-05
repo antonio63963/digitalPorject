@@ -1,0 +1,53 @@
+.contact-us {
+  width: 100%;
+  margin-bottom: 120px;
+  &_img>img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 370px;
+    @include aboutXS {
+     margin-bottom: 22px;
+    }
+  }
+}
+.contact-content {
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @include aboutXS {
+    flex-direction: column-reverse;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  input, textarea {
+    padding: 15px 21px;
+    margin-bottom: 10px;
+    background-color: $grey-light;
+    border: none;
+    color: '#8d8d8d';
+    min-width: 288px;
+  }
+  textarea {
+    resize: none;
+  }
+  input:focus,textarea:focus {
+    outline: none;
+  }
+  .note {
+    max-width: 331px;
+  }
+  .note {
+    display: flex;
+    font-size: 14px;
+    width: 80%;
+    margin: 11px 16px 21px auto;
+  }
+  button {
+    width: 222px;
+    letter-spacing: 2px;
+  }
+}

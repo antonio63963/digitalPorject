@@ -508,7 +508,6 @@
   margin: 16px;
   cursor: pointer;
   position: relative;
-  margin-bottom: 30px;
 }
 @media screen and (max-width: 1200px) {
   .project-item {
@@ -617,6 +616,65 @@
   background: #c0bde0;
 }
 
+.contact-us {
+  width: 100%;
+  margin-bottom: 120px;
+}
+.contact-us_img > img {
+  object-fit: cover;
+  max-width: 100%;
+  height: 370px;
+}
+@media screen and (max-width: 390px) {
+  .contact-us_img > img {
+    margin-bottom: 22px;
+  }
+}
+
+.contact-content {
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 390px) {
+  .contact-content {
+    flex-direction: column-reverse;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea {
+  padding: 15px 21px;
+  margin-bottom: 10px;
+  background-color: #F2F2F2;
+  border: none;
+  color: "#8d8d8d";
+  min-width: 288px;
+}
+form textarea {
+  resize: none;
+}
+form input:focus, form textarea:focus {
+  outline: none;
+}
+form .note {
+  max-width: 331px;
+}
+form .note {
+  display: flex;
+  font-size: 14px;
+  width: 80%;
+  margin: 11px 16px 21px auto;
+}
+form button {
+  width: 222px;
+  letter-spacing: 2px;
+}
+
 @font-face {
   font-family: Hoves;
   src: url("./fonts/Hoves.ttf");
@@ -719,6 +777,7 @@ body {
   border: none;
   padding: 24px 39px;
   color: #F2F2F2;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 390px) {
   .dark-button {
