@@ -5,6 +5,7 @@
 @import 'tasks.scss';
 @import 'projects.scss';
 @import 'contactUs.scss';
+@import 'footer.scss';
 
 @font-face {
   font-family: Hoves;
@@ -35,7 +36,9 @@ body {
   font-family: Hoves;
   color: $primary-color;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .main {
@@ -58,6 +61,15 @@ body {
   @include aboutXS {
     padding: 0 24px;
   }
+}
+
+footer {
+  background-color: $grafit;
+  width: 100vw;
+  color: $bgColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .largeTitle {

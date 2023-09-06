@@ -653,7 +653,7 @@ form input, form textarea {
   background-color: #F2F2F2;
   border: none;
   color: "#8d8d8d";
-  min-width: 288px;
+  min-width: 272px;
 }
 form textarea {
   resize: none;
@@ -673,6 +673,115 @@ form .note {
 form button {
   width: 222px;
   letter-spacing: 2px;
+}
+
+.footer-content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  padding: 0 135px;
+}
+@media screen and (max-width: 1317px) {
+  .footer-content {
+    padding: 0 90px;
+  }
+}
+@media screen and (max-width: 1136px) {
+  .footer-content {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer-content {
+    padding: 0 24px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .footer-content {
+    padding: 0 24px;
+  }
+}
+
+.footer-top {
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 390px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer-section_title {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 390px) {
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 24px;
+}
+
+footer ul > li {
+  margin-bottom: 16px;
+}
+
+footer ul > li:hover {
+  opacity: 0.5;
+}
+
+.section_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  max-width: 344px;
+  margin-bottom: 16px;
+}
+.contact-item .top-align {
+  align-self: self-start;
+}
+.contact-item img {
+  margin-right: 16px;
+}
+
+.socials-list {
+  width: 193px;
+  max-width: 193px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom {
+  opacity: 0.5;
+  padding: 24px;
+  justify-content: center;
+  text-align: center;
 }
 
 @font-face {
@@ -703,7 +812,8 @@ body {
   font-family: Hoves;
   color: #333;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main {
@@ -734,6 +844,15 @@ body {
   .main {
     padding: 0 24px;
   }
+}
+
+footer {
+  background-color: #2C2C2C;
+  width: 100vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .largeTitle {
